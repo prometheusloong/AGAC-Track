@@ -6,8 +6,8 @@
 - Task 2: Themetic roles identification
     Identify the themetic roles (ThemeOf, CauseOf) between trigger words. 
 - Task 3: "Gene;Function change;disease" link discovery
-    Extract the gene-function change-disease link. For example , "Mutations in SHP-2 phosphatase that cause hyperactivation of its catalytic activity have been identified in human leukemias, particularly juvenile myelomonocytic leukemia.", from this sentence, the participants need to extract SHP-2;GOF;juvenile myelomonocytic leukemia. 
-    Detailed information could visit AGAC Track website:
+  Extract the gene-function change-disease link. For example , "Mutations in SHP-2 phosphatase that cause hyperactivation of its catalytic activity have been identified in human leukemias, particularly juvenile myelomonocytic leukemia.", from this sentence, the participants need to extract SHP-2;GOF;juvenile myelomonocytic leukemia. 
+  Detailed information could visit AGAC Track website:
 - https://sites.google.com/view/bionlp-ost19-agac-track/home (main site),
 - http://120.79.44.74:8000/BioNLP_OST_AGAC (image site).
 
@@ -20,7 +20,7 @@
 #### BLSTM-CNN-CRF
 - python 3.6
 - tensorflow 1.12
-You could use conda to configure the environment easily.
+  You could use conda to configure the environment easily.
 ```    conda create --name agac_task1 python=3.6 
     conda init
     conda activate agac_task1
