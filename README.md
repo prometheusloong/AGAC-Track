@@ -11,18 +11,20 @@
 - https://sites.google.com/view/bionlp-ost19-agac-track/home (main site),
 - http://120.79.44.74:8000/BioNLP_OST_AGAC (image site).
 
-
 ## Environment Requirements
-### wapiti
-    
-### BLSTM-CNN-CRF
+#### wapiti
+- python 3
+- spacy
+- wapiti
+
+#### BLSTM-CNN-CRF
+- python 3.6
+- tensorflow 1.12
 You could use conda to configure the environment easily.
 ```    conda create --name agac_task1 python=3.6 
     conda init
     conda activate agac_task1
     conda install tensorflow-gpu=1.12 (or conda install tensorflow=1.12 if you havent a gpu)
 ```    
-- python 3.6.7
-- tensorflow 1.12.0
 
 ## Usage
