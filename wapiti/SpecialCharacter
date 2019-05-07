@@ -1,0 +1,844 @@
+UnicodeEncodeError:
+b'V\xc2\xbd'	O
+
+UnicodeEncodeError:
+b'V\xc2\xbd=-38.7\xc2\xb10.5mV'	O
+
+UnicodeEncodeError:
+b'V\xc2\xbd=-42.4\xc2\xb10.5mV'	O
+
+UnicodeEncodeError:
+b'V\xc2\xbd'	O
+
+UnicodeEncodeError:
+b'V\xc2\xbd=-86.7\xc2\xb10.2mV'	O
+
+UnicodeEncodeError:
+b'-82.2\xc2\xb10.3mV'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	I-MPA
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xce\xb23'	O
+
+UnicodeEncodeError:
+b'\xce\xb23'	O
+
+UnicodeEncodeError:
+b'\xce\xb1v\xce\xb23'	B-Protein
+
+UnicodeEncodeError:
+b'\xce\xb1v\xce\xb23'	B-MPA
+
+UnicodeEncodeError:
+b'\xce\xb1'	O
+
+UnicodeEncodeError:
+b'\xce\xb1'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'interferon-\xce\xb3'	O
+
+UnicodeEncodeError:
+b'NF-\xce\xbaB'	O
+
+UnicodeEncodeError:
+b'interferon-\xce\xb3-mediated'	B-MPA
+
+UnicodeEncodeError:
+b'TNF\xce\xb1'	I-MPA
+
+UnicodeEncodeError:
+b'IL-17\xce\xb1'	I-MPA
+
+UnicodeEncodeError:
+b'IFN\xce\xb3'	I-MPA
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xce\xb1\xe2\x81\x84\xce\xb2-subunit'	O
+
+UnicodeEncodeError:
+b'\xce\xb1\xe2\x81\x84\xce\xb2-subunit'	O
+
+UnicodeEncodeError:
+b'interleukin-1\xce\xb2'	I-MPA
+
+UnicodeEncodeError:
+b'factor-\xce\xb1'	I-MPA
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	I-CPA
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	I-CPA
+
+UnicodeEncodeError:
+b'G\xce\xb1s'	O
+
+UnicodeEncodeError:
+b'\xce\xb1'	O
+
+UnicodeEncodeError:
+b'G\xce\xb1s'	B-Gene
+
+UnicodeEncodeError:
+b'G\xce\xb1s'	B-Gene
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin'	B-Pathway
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xe2\x89\xa4'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xce\xbcmol'	O
+
+UnicodeEncodeError:
+b'\xce\xb4'	O
+
+UnicodeEncodeError:
+b'ATPsyn\xce\xb4'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xe2\x89\xa51'	O
+
+UnicodeEncodeError:
+b'\xe2\x89\xa51'	O
+
+UnicodeEncodeError:
+b'I\xe2\x86\x92N'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\xaf'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\xaf'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\xaf'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xc3\x97'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xc3\x97'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xc3\x97'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\xaf'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xce\xb3'	O
+
+UnicodeEncodeError:
+b'PI3K\xce\xb4'	O
+
+UnicodeEncodeError:
+b'p110\xce\xb4'	O
+
+UnicodeEncodeError:
+b'p85\xce\xb1'	O
+
+UnicodeEncodeError:
+b'p110\xce\xb4'	O
+
+UnicodeEncodeError:
+b'p110\xce\xb1'	O
+
+UnicodeEncodeError:
+b'p85\xce\xb1'	O
+
+UnicodeEncodeError:
+b'\xce\x94434-475'	O
+
+UnicodeEncodeError:
+b'p110\xce\xb1'	O
+
+UnicodeEncodeError:
+b'\xce\xb2'	O
+
+UnicodeEncodeError:
+b'\xce\xb4'	O
+
+UnicodeEncodeError:
+b'p85\xce\xb1'	O
+
+UnicodeEncodeError:
+b'p110\xce\xb4'	B-MPA
+
+UnicodeEncodeError:
+b'C\xce\xb1'	I-Enzyme
+
+UnicodeEncodeError:
+b'PKC\xce\xb1'	B-Enzyme
+
+UnicodeEncodeError:
+b'\xe2\x88\xbc30'	O
+
+UnicodeEncodeError:
+b'PKC\xce\xb1-M489V'	O
+
+UnicodeEncodeError:
+b'PKC\xce\xb1-M489V'	B-Enzyme
+
+UnicodeEncodeError:
+b'PKC\xce\xb1'	O
+
+UnicodeEncodeError:
+b'PKC\xce\xb1.'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-cells'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-cell'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-cell'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-cells'	O
+
+UnicodeEncodeError:
+b'NF-\xce\xbaB'	O
+
+UnicodeEncodeError:
+b'TNF-\xce\xb1-induced'	O
+
+UnicodeEncodeError:
+b'NF-\xce\xbaB'	O
+
+UnicodeEncodeError:
+b'NF-\xce\xbaB'	B-Protein
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'm\xc3\xbcllerian'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xce\xb1'	O
+
+UnicodeEncodeError:
+b'\xce\xb3'	O
+
+UnicodeEncodeError:
+b'Wnt-\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'Wnt-\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	I-Protein
+
+UnicodeEncodeError:
+b'\xce\x94htpG'	O
+
+UnicodeEncodeError:
+b'\xce\x94htpG'	O
+
+UnicodeEncodeError:
+b'\xc2\xb0'	O
+
+UnicodeEncodeError:
+b'sarcoglycan-\xce\xb4'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-galactosidase'	O
+
+UnicodeEncodeError:
+b'T\xe2\x86\x92A'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xce\xb1-melanocyte'	O
+
+UnicodeEncodeError:
+b'ACCAAG\xe2\x86\x92TAATGA'	O
+
+UnicodeEncodeError:
+b'\xce\xb3-carboxyglutamate'	I-Protein
+
+UnicodeEncodeError:
+b'PDGF-R\xce\xb2'	B-Gene
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'IL-1\xce\xb2'	O
+
+UnicodeEncodeError:
+b'TNF-\xce\xb1'	O
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin-dependent'	I-MPA
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-Catenin'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	B-Protein
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	B-Protein
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	B-Protein
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin(flox(ex3)/+'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'\xce\xb2-catenin'	B-Protein
+
+UnicodeEncodeError:
+b'\xe2\x89\xa52'	O
+
+UnicodeEncodeError:
+b'\xe2\x89\xa520'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x89\xa52'	O
+
+UnicodeEncodeError:
+b'I\xce\xbaB\xce\xb1'	O
+
+UnicodeEncodeError:
+b'I\xce\xbaB\xce\xb1'	O
+
+UnicodeEncodeError:
+b'I\xce\xbaB\xce\xb1'	B-Protein
+
+UnicodeEncodeError:
+b'\xc9\x9b4-negative'	O
+
+UnicodeEncodeError:
+b'\xc9\x9b4'	O
+
+UnicodeEncodeError:
+b'\xc9\x9b4'	O
+
+UnicodeEncodeError:
+b'\xc9\x9b4-negative'	O
+
+UnicodeEncodeError:
+b'A\xce\xb242'	O
+
+UnicodeEncodeError:
+b'A\xce\xb240'	O
+
+UnicodeEncodeError:
+b'\xc9\x9b4-negative'	O
+
+UnicodeEncodeError:
+b'Gly35Argfs\xe2\x88\x9775'	O
+
+UnicodeEncodeError:
+b'Pro33Alafs\xe2\x88\x9777'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'P=4.2\xc3\x9710-12'	I-MPA
+
+UnicodeEncodeError:
+b'P=6.2\xc3\x9710-10'	O
+
+UnicodeEncodeError:
+b'\xce\xb11-subunit'	O
+
+UnicodeEncodeError:
+b'R\xc3\xa9union'	O
+
+UnicodeEncodeError:
+b'\xe2\x84\xa2'	O
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin'	B-Pathway
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'Wnt/\xce\xb2-catenin'	O
+
+UnicodeEncodeError:
+b'A\xce\xb2'	O
+
+UnicodeEncodeError:
+b'A\xce\xb2'	O
+
+UnicodeEncodeError:
+b'A\xce\xb2'	O
+
+UnicodeEncodeError:
+b'A\xce\xb2.'	I-MPA
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xe2\x80\x89'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xb1'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xb1'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xb1'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xb1'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'P=2.5\xc3\x9710(-5'	O
+
+UnicodeEncodeError:
+b'\n\xc2\xa0\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xce\x94BmATG8'	B-Var
+
+UnicodeEncodeError:
+b'\xce\x94BmATG8'	O
+
+UnicodeEncodeError:
+b'CCR5\xce\x9432'	O
+
+UnicodeEncodeError:
+b'CCR5\xce\x9432'	O
+
+UnicodeEncodeError:
+b'CCR5\xce\x9432'	O
+
+UnicodeEncodeError:
+b'CCR5\xce\x9432'	O
+
+UnicodeEncodeError:
+b'TNF\xce\xb1'	O
+
+UnicodeEncodeError:
+b'IL-1\xce\xb2'	O
+
+UnicodeEncodeError:
+b'IFN-\xce\xb3'	O
+
+UnicodeEncodeError:
+b'CCR5\xce\x9432'	O
+
+UnicodeEncodeError:
+b'TNF\xce\xb1'	B-Protein
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'\xe2\x88\xbc40-50'	O
+
+UnicodeEncodeError:
+b'Albers-Sch\xc3\xb6nberg'	O
+
+UnicodeEncodeError:
+b'Albers-Sch\xc3\xb6nberg'	B-Disease
+
+UnicodeEncodeError:
+b'Albers-Sch\xc3\xb6nberg'	O
+
+UnicodeEncodeError:
+b'Albers-Sch\xc3\xb6nberg'	O
+
+UnicodeEncodeError:
+b'Promoter-\xce\xb2-glucuronidase'	O
+
+UnicodeEncodeError:
+b'Alstr\xc3\xb6m'	O
+
+UnicodeEncodeError:
+b'Alstr\xc3\xb6m'	O
+
+UnicodeEncodeError:
+b'\xc2\xa0'	O
+
+UnicodeEncodeError:
+b'eIF2\xce\xb1'	B-Protein
+
+UnicodeEncodeError:
+b'eIF2\xce\xb1'	B-Protein
+
+UnicodeEncodeError:
+b'\xce\xb1-melanocortin'	O
+
+UnicodeEncodeError:
+b'\xce\xb1-MSH'	O
+
+UnicodeEncodeError:
+b'\xce\xb1-MSH'	O
+
+UnicodeEncodeError:
+b'\xce\xb1-MSH'	O
+
+UnicodeEncodeError:
+b'\xce\xb3H2AX'	O
+
+UnicodeEncodeError:
+b'\xce\xb3H2AX'	O
+
+UnicodeEncodeError:
+b'\xce\xb3H2AX'	O
+
+UnicodeEncodeError:
+b'\xce\xb1-MSH'	O
+
+UnicodeEncodeError:
+b'\xce\xb3H2AX'	O
+
+transform json formate to BIO:	successful!
+^_^
+#########################
+done! ^_^
