@@ -16,12 +16,12 @@
 ### wapiti
     
 ### BLSTM-CNN-CRF
-  You could use conda to configure the environment easily.
-    conda create --name agac_task1 python=3.6 
+You could use conda to configure the environment easily.
+'''    conda create --name agac_task1 python=3.6 
     conda init
     conda activate agac_task1
     conda install tensorflow-gpu=1.12 (or conda install tensorflow=1.12 if you havent a gpu)
-    
+'''    
 - python 3.6.7
 - tensorflow 1.12.0
 
