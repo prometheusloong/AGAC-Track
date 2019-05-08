@@ -1,6 +1,6 @@
 # AGAC-Track task 1
 
-This repository is a practice for AGAC Track. The AGAC Task is part of the BioNLP Open Shared Tasks (BioNLP-OST: http://2019.bionlp-ost.org) and meets the BioNLP-OST standard of quality, originality and data formats. The track has three tasks(task contnet is following), and the repository challenges task 1 until now. We used two methods to come true Named-entity recognition. One of methods is wapiti which a software based on CRF. And another method is BLSTM-CNN-CRF which based on nerual network. In fact the BLSTM-CNN-CRF is better than wapiti.
+This repository is a practice for AGAC Track. The AGAC Task is part of the BioNLP Open Shared Tasks (BioNLP-OST: http://2019.bionlp-ost.org) and meets the BioNLP-OST standard of quality, originality and data formats. The track has three tasks(task comment is following), and the repository challenges task 1 until now. We used two methods to come true Named-entity recognition. One of methods is wapiti which a software based on CRF. And another method is BLSTM-CNN-CRF which based on nerual network. In fact the BLSTM-CNN-CRF is better than wapiti.
 - Task 1: Trigger words NER
     Recognize the trigger words in PubMed abstracts and annotated them as correct trigger labels or entities (Var, MPA, Interaction, Pathway, CPA, Reg, PosReg, NegReg, Disease, Gene, Protein, Enzyme). 
 - Task 2: Themetic roles identification
@@ -18,6 +18,10 @@ Detailed information could visit AGAC Track website:
 - spacy
 - wapiti (best add to environment variable)
 
+#### bidirectional LSTM
+-python 3.6
+-tensorflow 1.12
+
 #### BLSTM-CNN-CRF
 - python 3.6
 - tensorflow 1.12
@@ -26,7 +30,7 @@ You could use conda to configure the environment easily.
 ```    conda create --name agac_task1 python=3.6 
     conda init
     conda activate agac_task1
-    conda install tensorflow-gpu=1.12 (or conda install tensorflow=1.12 if you dont have a gpu)
+    conda install tensorflow-gpu=1.12 cudatoolkit=9.0(or conda install tensorflow=1.12 if you dont have a gpu.You can also choose the version of cudatoolkit according to your CUDA's version.)
 ```    
 
 ## Usage
@@ -68,6 +72,12 @@ You could change the parameter and pat file to adjust the result, detail informa
 - https://wapiti.limsi.fr/manual.html
 
 ### bidirectional LSTM
+You should divide your dataset into three files (train.txt, test.txt and dev.txt). Put them into the neural network.
+Run with:
+```
+python experiment.py config.conf
+```
+#### Configuration
 
 ### BLSTM-CNN-CRF
 You should put 3 files(train.txt, test.txt and dev.txt) at blstm-cnn-crf/data/agac_nospecial/
