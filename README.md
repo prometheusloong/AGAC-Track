@@ -67,6 +67,8 @@ perl /public/home/zcyu/ref/NLP/2019SpringTextM/conlleval.pl -d $'\t' < ./agac_te
 You could change the parameter and pat file to adjust the result, detail information could see the wapiti manual:
 - https://wapiti.limsi.fr/manual.html
 
+### bidirectional LSTM
+
 ### BLSTM-CNN-CRF
 You should put 3 files(train.txt, test.txt and dev.txt) at blstm-cnn-crf/data/agac_nospecial/
 
