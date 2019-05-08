@@ -1,0 +1,421 @@
+Using TensorFlow backend.
+Generate new embeddings files for a dataset
+Read file: komninos_english_embeddings.gz
+Added words: 3
+:: Transform agac_nospecial dataset ::
+:: Create Train Matrix ::
+Unknown-Tokens: 8.10%
+:: Create Dev Matrix ::
+Unknown-Tokens: 7.05%
+:: Create Test Matrix ::
+Unknown-Tokens: 8.75%
+DONE - Embeddings file saved: pkl/agac_nospecial_komninos_english_embeddings.pkl
+--- agac_nospecial ---
+1071 train sentences
+362 dev sentences
+306 test sentences
+2019-05-06 18:56:33.016314: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-05-06 18:56:33.312702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:2f:00.0
+totalMemory: 15.90GiB freeMemory: 3.48GiB
+2019-05-06 18:56:33.557058: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: Tesla P100-PCIE-16GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:86:00.0
+totalMemory: 15.90GiB freeMemory: 14.11GiB
+2019-05-06 18:56:33.558754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1
+2019-05-06 18:56:35.690791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-06 18:56:35.690852: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 
+2019-05-06 18:56:35.690880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y 
+2019-05-06 18:56:35.690890: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N 
+2019-05-06 18:56:35.691321: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3199 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:2f:00.0, compute capability: 6.0)
+2019-05-06 18:56:35.691865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 13663 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 6.0)
+LSTM-Size: [100, 100]
+_____________________________________________________________________________________________________________________________
+Layer (type)                             Output Shape               Param #        Connected to                              
+=============================================================================================================================
+words_input (InputLayer)                 (None, None)               0                                                        
+_____________________________________________________________________________________________________________________________
+casing_input (InputLayer)                (None, None)               0                                                        
+_____________________________________________________________________________________________________________________________
+word_embeddings (Embedding)              (None, None, 300)          66692700       words_input[0][0]                         
+_____________________________________________________________________________________________________________________________
+casing_emebddings (Embedding)            (None, None, 10)           80             casing_input[0][0]                        
+_____________________________________________________________________________________________________________________________
+concatenate_1 (Concatenate)              (None, None, 310)          0              word_embeddings[0][0]                     
+                                                                                   casing_emebddings[0][0]                   
+_____________________________________________________________________________________________________________________________
+shared_varLSTM_1 (Bidirectional)         (None, None, 200)          328800         concatenate_1[0][0]                       
+_____________________________________________________________________________________________________________________________
+shared_varLSTM_2 (Bidirectional)         (None, None, 200)          240800         shared_varLSTM_1[0][0]                    
+_____________________________________________________________________________________________________________________________
+agac_nospecial_hidden_lin_layer (TimeDis (None, None, 25)           5025           shared_varLSTM_2[0][0]                    
+_____________________________________________________________________________________________________________________________
+agac_nospecial_crf (ChainCRF)            (None, None, 25)           675            agac_nospecial_hidden_lin_layer[0][0]     
+=============================================================================================================================
+Total params: 67,268,080
+Trainable params: 575,380
+Non-trainable params: 66,692,700
+_____________________________________________________________________________________________________________________________
+
+--------- Epoch 1 -----------
+340.60 sec for training (340.60 total)
+-- agac_nospecial --
+Dev-Data: Prec: 0.000, Rec: 0.000, F1: 0.0000
+Test-Data: Prec: 0.000, Rec: 0.000, F1: 0.0000
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.0000
+  Test-Score 0.0000
+
+41.80 sec for evaluation
+
+--------- Epoch 2 -----------
+342.13 sec for training (682.72 total)
+-- agac_nospecial --
+Dev-Data: Prec: 0.000, Rec: 0.000, F1: 0.0000
+Test-Data: Prec: 0.000, Rec: 0.000, F1: 0.0000
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.0000
+  Test-Score 0.0000
+
+41.12 sec for evaluation
+
+--------- Epoch 3 -----------
+333.50 sec for training (1016.22 total)
+-- agac_nospecial --
+Dev-Data: Prec: 0.571, Rec: 0.010, F1: 0.0200
+Wrong BIO-Encoding 3/33 labels, 9.09%
+Wrong BIO-Encoding 1/31 labels, 3.23%
+Test-Data: Prec: 0.500, Rec: 0.028, F1: 0.0525
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.0200
+  Test-Score 0.0525
+
+40.65 sec for evaluation
+
+--------- Epoch 4 -----------
+327.44 sec for training (1343.66 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 2/19 labels, 10.53%
+Wrong BIO-Encoding 1/18 labels, 5.56%
+Dev-Data: Prec: 0.647, Rec: 0.014, F1: 0.0274
+Wrong BIO-Encoding 6/36 labels, 16.67%
+Wrong BIO-Encoding 3/33 labels, 9.09%
+Test-Data: Prec: 0.606, Rec: 0.037, F1: 0.0697
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.0274
+  Test-Score 0.0697
+
+41.45 sec for evaluation
+
+--------- Epoch 5 -----------
+342.86 sec for training (1686.52 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 15/136 labels, 11.03%
+Wrong BIO-Encoding 6/127 labels, 4.72%
+Dev-Data: Prec: 0.413, Rec: 0.064, F1: 0.1101
+Wrong BIO-Encoding 26/199 labels, 13.07%
+Wrong BIO-Encoding 12/185 labels, 6.49%
+Test-Data: Prec: 0.476, Rec: 0.163, F1: 0.2424
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.1101
+  Test-Score 0.2424
+
+41.97 sec for evaluation
+
+--------- Epoch 6 -----------
+328.91 sec for training (2015.43 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 116/263 labels, 44.11%
+Wrong BIO-Encoding 33/180 labels, 18.33%
+Dev-Data: Prec: 0.401, Rec: 0.075, F1: 0.1263
+Wrong BIO-Encoding 137/317 labels, 43.22%
+Wrong BIO-Encoding 36/216 labels, 16.67%
+Test-Data: Prec: 0.426, Rec: 0.170, F1: 0.2431
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.1263
+  Test-Score 0.2431
+
+41.53 sec for evaluation
+
+--------- Epoch 7 -----------
+334.91 sec for training (2350.34 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 13/220 labels, 5.91%
+Wrong BIO-Encoding 5/212 labels, 2.36%
+Dev-Data: Prec: 0.377, Rec: 0.099, F1: 0.1569
+Wrong BIO-Encoding 12/269 labels, 4.46%
+Wrong BIO-Encoding 5/262 labels, 1.91%
+Test-Data: Prec: 0.408, Rec: 0.198, F1: 0.2665
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.1569
+  Test-Score 0.2665
+
+41.93 sec for evaluation
+
+--------- Epoch 8 -----------
+343.42 sec for training (2693.76 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 4/370 labels, 1.08%
+Wrong BIO-Encoding 2/368 labels, 0.54%
+Dev-Data: Prec: 0.380, Rec: 0.177, F1: 0.2411
+Wrong BIO-Encoding 24/346 labels, 6.94%
+Wrong BIO-Encoding 7/329 labels, 2.13%
+Test-Data: Prec: 0.450, Rec: 0.268, F1: 0.3360
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.2411
+  Test-Score 0.3360
+
+40.94 sec for evaluation
+
+--------- Epoch 9 -----------
+333.78 sec for training (3027.54 total)
+-- agac_nospecial --
+Dev-Data: Prec: 0.568, Rec: 0.053, F1: 0.0976
+Test-Data: Prec: 0.646, Rec: 0.152, F1: 0.2455
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.2411
+  Test-Score 0.3360
+
+38.93 sec for evaluation
+
+--------- Epoch 10 -----------
+332.28 sec for training (3359.82 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 1/328 labels, 0.30%
+Wrong BIO-Encoding 1/328 labels, 0.30%
+Dev-Data: Prec: 0.391, Rec: 0.163, F1: 0.2298
+Wrong BIO-Encoding 4/308 labels, 1.30%
+Wrong BIO-Encoding 1/305 labels, 0.33%
+Test-Data: Prec: 0.464, Rec: 0.261, F1: 0.3337
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.2411
+  Test-Score 0.3360
+
+41.09 sec for evaluation
+
+--------- Epoch 11 -----------
+342.88 sec for training (3702.70 total)
+-- agac_nospecial --
+Dev-Data: Prec: 0.397, Rec: 0.069, F1: 0.1170
+Wrong BIO-Encoding 3/195 labels, 1.54%
+Wrong BIO-Encoding 1/193 labels, 0.52%
+Test-Data: Prec: 0.549, Rec: 0.196, F1: 0.2888
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.2411
+  Test-Score 0.3360
+
+39.62 sec for evaluation
+
+--------- Epoch 12 -----------
+335.95 sec for training (4038.65 total)
+-- agac_nospecial --
+Dev-Data: Prec: 0.404, Rec: 0.184, F1: 0.2531
+Test-Data: Prec: 0.524, Rec: 0.279, F1: 0.3643
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.2531
+  Test-Score 0.3643
+
+39.32 sec for evaluation
+
+--------- Epoch 13 -----------
+333.33 sec for training (4371.98 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 2/505 labels, 0.40%
+Wrong BIO-Encoding 1/504 labels, 0.20%
+Dev-Data: Prec: 0.352, Rec: 0.225, F1: 0.2744
+Wrong BIO-Encoding 4/419 labels, 0.95%
+Wrong BIO-Encoding 1/416 labels, 0.24%
+Test-Data: Prec: 0.448, Rec: 0.344, F1: 0.3891
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.2744
+  Test-Score 0.3891
+
+41.46 sec for evaluation
+
+--------- Epoch 14 -----------
+341.96 sec for training (4713.94 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 3/660 labels, 0.45%
+Wrong BIO-Encoding 1/658 labels, 0.15%
+Dev-Data: Prec: 0.341, Rec: 0.285, F1: 0.3102
+Test-Data: Prec: 0.409, Rec: 0.372, F1: 0.3892
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3102
+  Test-Score 0.3892
+
+40.52 sec for evaluation
+
+--------- Epoch 15 -----------
+327.50 sec for training (5041.44 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 6/469 labels, 1.28%
+Wrong BIO-Encoding 3/466 labels, 0.64%
+Dev-Data: Prec: 0.378, Rec: 0.222, F1: 0.2800
+Wrong BIO-Encoding 6/400 labels, 1.50%
+Wrong BIO-Encoding 3/397 labels, 0.76%
+Test-Data: Prec: 0.444, Rec: 0.323, F1: 0.3743
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3102
+  Test-Score 0.3892
+
+39.26 sec for evaluation
+
+--------- Epoch 16 -----------
+335.44 sec for training (5376.88 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 7/630 labels, 1.11%
+Wrong BIO-Encoding 4/627 labels, 0.64%
+Dev-Data: Prec: 0.338, Rec: 0.269, F1: 0.2999
+Wrong BIO-Encoding 8/461 labels, 1.74%
+Wrong BIO-Encoding 4/457 labels, 0.88%
+Test-Data: Prec: 0.433, Rec: 0.362, F1: 0.3944
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3102
+  Test-Score 0.3892
+
+41.28 sec for evaluation
+
+--------- Epoch 17 -----------
+339.16 sec for training (5716.04 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 1/469 labels, 0.21%
+Wrong BIO-Encoding 1/469 labels, 0.21%
+Dev-Data: Prec: 0.372, Rec: 0.221, F1: 0.2773
+Wrong BIO-Encoding 7/380 labels, 1.84%
+Wrong BIO-Encoding 4/377 labels, 1.06%
+Test-Data: Prec: 0.496, Rec: 0.346, F1: 0.4074
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3102
+  Test-Score 0.3892
+
+38.64 sec for evaluation
+
+--------- Epoch 18 -----------
+324.30 sec for training (6040.34 total)
+-- agac_nospecial --
+Dev-Data: Prec: 0.399, Rec: 0.177, F1: 0.2449
+Wrong BIO-Encoding 4/310 labels, 1.29%
+Wrong BIO-Encoding 1/307 labels, 0.33%
+Test-Data: Prec: 0.546, Rec: 0.309, F1: 0.3943
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3102
+  Test-Score 0.3892
+
+39.02 sec for evaluation
+
+--------- Epoch 19 -----------
+329.26 sec for training (6369.60 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 6/851 labels, 0.71%
+Wrong BIO-Encoding 4/849 labels, 0.47%
+Dev-Data: Prec: 0.317, Rec: 0.341, F1: 0.3284
+Wrong BIO-Encoding 7/561 labels, 1.25%
+Wrong BIO-Encoding 5/559 labels, 0.89%
+Test-Data: Prec: 0.388, Rec: 0.397, F1: 0.3927
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3284
+  Test-Score 0.3927
+
+41.85 sec for evaluation
+
+--------- Epoch 20 -----------
+340.27 sec for training (6709.88 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 3/703 labels, 0.43%
+Wrong BIO-Encoding 2/702 labels, 0.28%
+Dev-Data: Prec: 0.336, Rec: 0.299, F1: 0.3161
+Wrong BIO-Encoding 3/508 labels, 0.59%
+Wrong BIO-Encoding 2/507 labels, 0.39%
+Test-Data: Prec: 0.422, Rec: 0.394, F1: 0.4073
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3284
+  Test-Score 0.3927
+
+39.21 sec for evaluation
+
+--------- Epoch 21 -----------
+325.85 sec for training (7035.73 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 1/645 labels, 0.16%
+Wrong BIO-Encoding 1/645 labels, 0.16%
+Dev-Data: Prec: 0.329, Rec: 0.269, F1: 0.2963
+Wrong BIO-Encoding 5/456 labels, 1.10%
+Wrong BIO-Encoding 3/454 labels, 0.66%
+Test-Data: Prec: 0.435, Rec: 0.362, F1: 0.3952
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3284
+  Test-Score 0.3927
+
+40.49 sec for evaluation
+
+--------- Epoch 22 -----------
+336.31 sec for training (7372.04 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 10/532 labels, 1.88%
+Wrong BIO-Encoding 3/525 labels, 0.57%
+Dev-Data: Prec: 0.343, Rec: 0.227, F1: 0.2735
+Wrong BIO-Encoding 6/403 labels, 1.49%
+Wrong BIO-Encoding 4/401 labels, 1.00%
+Test-Data: Prec: 0.476, Rec: 0.349, F1: 0.4030
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3284
+  Test-Score 0.3927
+
+41.90 sec for evaluation
+
+--------- Epoch 23 -----------
+339.85 sec for training (7711.89 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 5/829 labels, 0.60%
+Wrong BIO-Encoding 2/826 labels, 0.24%
+Dev-Data: Prec: 0.320, Rec: 0.335, F1: 0.3277
+Wrong BIO-Encoding 18/570 labels, 3.16%
+Wrong BIO-Encoding 6/558 labels, 1.08%
+Test-Data: Prec: 0.409, Rec: 0.418, F1: 0.4135
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3284
+  Test-Score 0.3927
+
+39.86 sec for evaluation
+
+--------- Epoch 24 -----------
+329.57 sec for training (8041.46 total)
+-- agac_nospecial --
+Wrong BIO-Encoding 16/674 labels, 2.37%
+Wrong BIO-Encoding 7/665 labels, 1.05%
+Dev-Data: Prec: 0.334, Rec: 0.280, F1: 0.3045
+Wrong BIO-Encoding 10/465 labels, 2.15%
+Wrong BIO-Encoding 5/460 labels, 1.09%
+Test-Data: Prec: 0.426, Rec: 0.359, F1: 0.3896
+
+Scores from epoch with best dev-scores:
+  Dev-Score: 0.3284
+  Test-Score 0.3927
+
+39.95 sec for evaluation
+!!! Early stopping, no improvement after 5 epochs !!!
+
