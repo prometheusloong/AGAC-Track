@@ -72,11 +72,6 @@ You should put 3 files(train.txt, test.txt and dev.txt) at blstm-cnn-crf/data/ag
 
 The parameter: 
 ```
-######################################################
-#
-# Data preprocessing
-#
-######################################################
 datasets = {
     'agac_nospecial':                                   #Name of the dataset
         {'columns': {0:'tokens', 1:'POS', 2:'chunk_BIO'},   #CoNLL format for the input data. Column 0 contains tokens, column 2 contains POS and column 2 contains chunk information using BIO encoding
