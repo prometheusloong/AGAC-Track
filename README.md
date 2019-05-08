@@ -78,7 +78,52 @@ Run with:
 python experiment.py config.conf
 ```
 #### Configuration
-
+- path_train - Path to the training data, in CoNLL tab-separated format. One word per line, first column is the word, last column is the label. Empty lines between sentences.
+- path_dev - Path to the development data, used for choosing the best epoch.
+- path_test - Path to the test file. Can contain multiple files, colon separated.
+- conll_eval - Whether the standard CoNLL NER evaluation should be run.
+- main_label - The output label for which precision/recall/F-measure are calculated. Does not affect accuracy or measures from the CoNLL eval.
+- model_selector - What is measured on the dev set for model selection: "dev_conll_f:high" for NER and chunking, "dev_acc:high" for POS-tagging, "dev_f05:high" for error detection.
+- preload_vectors - Path to the pretrained word embeddings, in word2vec plain text format. If your embeddings are in binary, you can use convertvec to convert them to plain text.
+- word_embedding_size - Size of the word embeddings used in the model.
+- crf_on_top - If True, use a CRF as the output layer. If False, use softmax instead.
+- emb_initial_zero - Whether word embeddings should have zero initialisation by default.
+- train_embeddings - Whether word embeddings should be updated during training.
+- char_embedding_size - Size of the character embeddings.
+- word_recurrent_size - Size of the word-level LSTM hidden layers.
+- char_recurrent_size - Size of the char-level LSTM hidden layers.
+- hidden_layer_size - Size of the extra hidden layer on top of the bi-LSTM.
+- char_hidden_layer_size - Size of the extra hidden layer on top of the character-based component.
+- lowercase - Whether words should be lowercased when mapping to word embeddings.
+- replace_digits - Whether all digits should be replaced by 0.
+- min_word_freq - Minimal frequency of words to be included in the vocabulary. Others will be considered OOV.
+- singletons_prob - The probability of mapping words that appear only once to OOV instead during training.
+- allowed_word_length - Maximum allowed word length, clipping the rest. Can be necessary if the text contains unreasonably long tokens, eg URLs.
+- max_train_sent_length - Discard sentences longer than this limit when training.
+- vocab_include_devtest - Load words from dev and test sets also into the vocabulary. If they don't appear in the training set, they will have the default representations from the preloaded embeddings.
+- vocab_only_embedded - Whether the vocabulary should contain only words in the pretrained embedding set.
+- initializer - The method used to initialize weight matrices in the network.
+- opt_strategy - The method used for weight updates.
+- learningrate - Learning rate.
+- clip - Clip the gradient to a range.
+- batch_equal_size - Create batches of sentences with equal length.
+- epochs - Maximum number of epochs to run.
+- stop_if_no_improvement_for_epochs - Training will be stopped if there has been no improvement for n epochs.
+- learningrate_decay - If performance hasn't improved for 3 epochs, multiply the learning rate with this value.
+- dropout_input - The probability for applying dropout to the word representations. 0.0 means no dropout.
+- dropout_word_lstm - The probability for applying dropout to the LSTM outputs.
+- tf_per_process_gpu_memory_fraction - The fraction of GPU memory that the process can use.
+- tf_allow_growth - Whether the GPU memory usage can grow dynamically.
+- main_cost - Control the weight of the main labeling objective.
+- lmcost_max_vocab_size = Maximum vocabulary size for the language modeling loss. The remaining words are mapped to a single entry.
+- lmcost_hidden_layer_size = Hidden layer size for the language modeling loss.
+- lmcost_gamma - Weight for the language modeling loss.
+- char_integration_method - How character information is integrated. Options are: "none" (not integrated), "concat" (concatenated), - "attention" (the method proposed in Rei et al. (2016)).
+- save - Path to save the model.
+- load - Path to load the model.
+- garbage_collection - Whether garbage collection is explicitly called. Makes things slower but can operate with bigger models.
+- lstm_use_peepholes - Whether to use the LSTM implementation with peepholes.
+- random_seed - Random seed for initialisation and data shuffling. This can affect results, so for robust conclusions I recommend running multiple experiments with different seeds and averaging the metrics.
 ### BLSTM-CNN-CRF
 You should put 3 files(train.txt, test.txt and dev.txt) at blstm-cnn-crf/data/agac_nospecial/
 
