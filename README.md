@@ -16,7 +16,7 @@ Detailed information could visit AGAC Track website:
 #### wapiti
 - python 3
 - spacy
-- wapiti (best add to environment)
+- wapiti (best add to environment variable)
 
 #### BLSTM-CNN-CRF
 - python 3.6
