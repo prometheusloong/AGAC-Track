@@ -72,7 +72,8 @@ You could change the parameter and pat file to adjust the result, detail informa
 - https://wapiti.limsi.fr/manual.html
 
 ### bidirectional LSTM
-You should divide your dataset into three files (train.txt, test.txt and dev.txt). Put them into the neural network.
+You should divide your dataset into three files (train.txt, test.txt and dev.txt). Put them into the neural network.For pretrain, download [word2vec](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit)
+
 Run with:
 ```
 python experiment.py config.conf
