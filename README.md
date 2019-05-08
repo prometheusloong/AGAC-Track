@@ -43,7 +43,7 @@ of IN O
 ```
 
 /wapiti/json2BIO.py could transform .json file to BIO format. 
-It will delete special charater and print to screen.
+It will delete special charater(like β and so on) and print to screen.
 ```
 cd wapiti/
 python json2BIO.py -i ../data -o ./outtrain
