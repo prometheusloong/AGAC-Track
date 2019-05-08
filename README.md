@@ -44,17 +44,58 @@ of IN O
 
 /wapiti/json2BIO.py could transform .json file to BIO format
 ```
+cd wapiti/
 python json2BIO.py -i ../data -o ./outtrain
 -i input .json file
 -o output BIO file
 ```
 
-And you could splite the BIO data to 7:3 (train data and test data for wapiti) and 6:2:2 (train data, test data and dev data for blstm-cnn-crf), randomly.
+And you should splite the BIO data to 7:3 (train data and test data for wapiti) and 6:2:2 (train data, test data and dev data for blstm-cnn-crf), randomly.
 
+### wapiti
+```
+#train
+wapiti train -a sgd-l1 -t 3 -i 10 -p ./pat/Tok321.pat <(cat ./outtrain-0.7/*.tab) ./agac_train.mod
+#dump
+wapiti dump ./agac_train.mod ./agac_train.txt
+#label
+wapiti label -c -m ./agac_train.mod <(cat ./outtrain-0.3/*.tab) ./agac_test.tab
+#evaluation
+perl /public/home/zcyu/ref/NLP/2019SpringTextM/conlleval.pl -d $'\t' < ./agac_test.tab | tee ./agac_test.eval
+```
+You could change the parameter and pat file to adjust the result, detail information could see the wapiti manual:
+- https://wapiti.limsi.fr/manual.html
+
+### BLSTM-CNN-CRF
+You should put 3 files(train.txt, test.txt and dev.txt) at blstm-cnn-crf/data/agac_nospecial/
+
+The parameter: 
+```
+######################################################
+#
+# Data preprocessing
+#
+######################################################
+datasets = {
+    'agac_nospecial':                                   #Name of the dataset
+        {'columns': {0:'tokens', 1:'POS', 2:'chunk_BIO'},   #CoNLL format for the input data. Column 0 contains tokens, column 2 contains POS and column 2 contains chunk information using BIO encoding
+         'label': 'chunk_BIO',                                #Which column we like to predict
+         'evaluate': True,                                  #Should we evaluate on this task? Set true always for single task setups
+         'commentSymbol': None}                             #Lines in the input data starting with this string will be skipped. Can be used to skip comments
+}
+
+# :: Path on your computer to the word embeddings. Embeddings by Komninos et al. will be downloaded automatically ::
+embeddingsPath = 'komninos_english_embeddings.gz'
+```
+And run:
+```
+python Train_Chunking.py
+```
+
+## Results (On test data)
 ### wapiti
 
 
-## Results (On test data)
 
 ## Acknowledgment
 A note about Neural network for NER.
