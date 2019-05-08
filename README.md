@@ -30,7 +30,31 @@ You could use conda to configure the environment easily.
 ```    
 
 ## Usage
+### data format
+```
+Mutations NNPS B-Var
+in IN O
+SHP-2 NNP B-Gene
+phosphatase NN B-Enzyme
+that WDT O
+cause VBP O
+hyperactivation NN B-PosReg
+of IN O
+```
 
+/wapiti/json2BIO.py could transform .json file to BIO format
+```
+python json2BIO.py -i ../data -o ./outtrain
+-i input .json file
+-o output BIO file
+```
+
+And you could splite the BIO data to 7:3 (train data and test data for wapiti) and 6:2:2 (train data, test data and dev data for blstm-cnn-crf), randomly.
+
+### wapiti
+
+
+## Results (On test data)
 
 ## Acknowledgment
 A note about Neural network for NER.
