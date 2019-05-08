@@ -22,10 +22,3 @@ wapiti label -c -m ./agac_train.mod <(cat ./outtrain-0.3/*.tab) ./agac_test.tab
 #conlleval.pl
 perl /public/home/zcyu/ref/NLP/2019SpringTextM/conlleval.pl -d $'\t' < ./agac_test.tab | tee ./agac_test.eval
 
-wapiti train -a sgd-l1 -t 3 -i 10 -p ./Tok1.pat <(cat ./outbio-0.7/*.tab) ./agac_train.mod
-#dump
-wapiti dump ./agac_train.mod ./agac_train.txt
-#label
-wapiti label -c -m ./agac_train.mod <(cat ./outbio-0.3/*.tab) ./agac_test.tab
-#conlleval.pl
-perl /public/home/zcyu/ref/NLP/2019SpringTextM/conlleval.pl -d $'\t' < ./agac_test.tab | tee ./agac_test.eval
