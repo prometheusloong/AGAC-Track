@@ -19,8 +19,8 @@ Detailed information could visit AGAC Track website:
 - wapiti (best add to environment variable)
 
 #### bidirectional LSTM
--python 3.6
--tensorflow 1.12
+- python 3.6
+- tensorflow 1.12
 
 #### BLSTM-CNN-CRF
 - python 3.6
