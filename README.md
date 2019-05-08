@@ -112,6 +112,7 @@ accuracy:  86.67%; precision:  38.78%; recall:  18.39%; FB1:  24.95
               Var: precision:  46.48%; recall:  29.60%; FB1:  36.16  142
 ```
 ### BLSTM-CNN-CRF
+F1-Score:
 ```
 Scores from epoch with best dev-scores:
   Dev-Score: 0.3284
