@@ -33,5 +33,11 @@ You could use conda to configure the environment easily.
 
 
 ## Acknowledgment
+A note about Neural network for NER.
+- https://www.paperweekly.site/papers/notes/146
 
-https://www.paperweekly.site/papers/notes/146
+The method used the BLSTM-CNN-CRF from UKPLab. Thank you for contributing this to the community.
+- https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf.git
+
+
+
