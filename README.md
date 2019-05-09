@@ -1,6 +1,6 @@
 # AGAC-Track task 1
 
-This repository is a practice for AGAC Track. The AGAC Task is part of the BioNLP Open Shared Tasks (BioNLP-OST: http://2019.bionlp-ost.org) and meets the BioNLP-OST standard of quality, originality and data formats. The track has three tasks(task content is following), and the repository challenges task 1 until now. We used two methods to come true Named-entity recognition. One of methods is wapiti which a software based on CRF. And another method is BLSTM-CNN-CRF which based on nerual network. In fact the BLSTM-CNN-CRF is better than wapiti.
+This repository is a practice for AGAC Track. The AGAC Task is part of the BioNLP Open Shared Tasks (BioNLP-OST: http://2019.bionlp-ost.org) and meets the BioNLP-OST standard of quality, originality and data formats. The track has three tasks(task content is following), and the repository challenges task 1 until now. We used three methods to come true Named-entity recognition. One of methods is wapiti which a software based on CRF. Second method is Sequence labeler which is based on bidirectional LSTM .The last method combin above two methods named BLSTM-CNN-CRF which based on nerual network. In fact the BLSTM-CNN-CRF is better.
 - Task 1: Trigger words NER
     Recognize the trigger words in PubMed abstracts and annotated them as correct trigger labels or entities (Var, MPA, Interaction, Pathway, CPA, Reg, PosReg, NegReg, Disease, Gene, Protein, Enzyme). 
 - Task 2: Themetic roles identification
@@ -47,8 +47,8 @@ hyperactivation NN B-PosReg
 of IN O
 ```
 
-/wapiti/json2BIO.py could transform .json file to BIO format. 
-It will delete special charater(like β and so on) and print to screen.
+AGAC-Track/wapiti/json2BIO.py could transform .json file to BIO format. 
+It will delete special charater(like β and so on, if you choose -s F) and print to screen.
 ```
 cd wapiti/
 python json2BIO.py -i ../data -o ./outtrain
@@ -73,10 +73,10 @@ perl /public/home/zcyu/ref/NLP/2019SpringTextM/conlleval.pl -d $'\t' < ./agac_te
 You could change the parameter and pat file to adjust the result, detail information could see the wapiti manual:
 - https://wapiti.limsi.fr/manual.html
 
-### bidirectional LSTM
-You should divide your dataset into three files (train.txt, test.txt and dev.txt). Put them into the neural network.For pretrain, download [word2vec](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit)
-
-Run with:
+### Sequence labeler
+You should divide your dataset into three files (train.txt, test.txt and dev.txt). Put them into the neural network.For pretrain, download word2vec
+You could congfigure some paramter in fcepublic.conf, and you should write your data path to it.
+And you could run with:
 ```
 python experiment.py config.conf
 ```
@@ -127,6 +127,22 @@ python experiment.py config.conf
 - garbage_collection - Whether garbage collection is explicitly called. Makes things slower but can operate with bigger models.
 - lstm_use_peepholes - Whether to use the LSTM implementation with peepholes.
 - random_seed - Random seed for initialisation and data shuffling. This can affect results, so for robust conclusions I recommend running multiple experiments with different seeds and averaging the metrics.
+#### Printing output
+There is now a separate script for loading a saved model and using it to print output for a given input file. Use the saveoption in the config file for saving the model. The input file needs to be in the same format as the training data (one word per line, labels in a separate column). The labels are expected for printing output as well. If you don't know the correct labels, just print any valid label in that field.
+
+To print the output, run:
+```
+python print_output.py labels model_file input_file
+```
+This will print the input file to standard output, with an extra column at the end that shows the prediction.
+
+You can also use:
+```
+python print_output.py probs model_file input_file
+```
+This will print the individual probabilities for each of the possible labels. If the model is using CRFs, the probs option will output unnormalised state scores without taking the transitions into account.
+
+
 ### BLSTM-CNN-CRF
 You should put 3 files(train.txt, test.txt and dev.txt) at blstm-cnn-crf/data/agac_nospecial/
 
@@ -147,6 +163,7 @@ And run:
 ```
 python Train_Chunking.py
 ```
+You could see more detail information on /blstm-cnn-crf/README.md
 
 ## Results (On test data)
 ### wapiti
@@ -166,6 +183,11 @@ accuracy:  86.67%; precision:  38.78%; recall:  18.39%; FB1:  24.95
               Reg: precision:  25.00%; recall:   6.35%; FB1:  10.13  16
               Var: precision:  46.48%; recall:  29.60%; FB1:  36.16  142
 ```
+### Sequence labeler
+F1-Score:
+```
+
+```
 ### BLSTM-CNN-CRF
 F1-Score:
 ```
@@ -173,6 +195,11 @@ Scores from epoch with best dev-scores:
   Dev-Score: 0.3284
   Test-Score 0.3927
 ```
+
+## Expectation
+- We want to choose a model which can classify the sentences first because a word which have been labeled in some sentences may not be labeled too in another sentence. We need a model to identify if the sentence is what we need.
+- Bert is so hot now.  It may be a good way to finish this work. we want to find a useful model which can combin it.
+- And a dictionary about biology maybe improve the result of NER. Sentence judgement is an import side, we need to consider it if we want to improve the ability of our models.
 
 ## Acknowledgment
 A note about Neural network for NER.
