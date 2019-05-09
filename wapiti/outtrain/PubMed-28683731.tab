@@ -1,0 +1,17 @@
+Nephron NNP B-CPA
+development NN I-CPA
+and CC O
+extrarenal JJ B-CPA
+features NNS I-CPA
+in IN O
+a DT O
+child NN O
+with IN O
+congenital JJ O
+nephrotic JJ O
+syndrome NN O
+caused VBN B-Reg
+by IN I-Reg
+null NN O
+LAMB2 NN B-Gene
+mutations NNS B-Var

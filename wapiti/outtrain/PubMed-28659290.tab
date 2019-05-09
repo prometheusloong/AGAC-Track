@@ -1,0 +1,11 @@
+Early-onset JJ B-Disease
+autoimmune NN I-Disease
+disease NN I-Disease
+due IN O
+to IN O
+a DT O
+heterozygous JJ O
+loss-of-function NN B-NegReg
+mutation NN B-Var
+in IN O
+TNFAIP3 NNP B-Gene
