@@ -186,8 +186,11 @@ accuracy:  86.67%; precision:  38.78%; recall:  18.39%; FB1:  24.95
 ### Sequence labeler
 F1-Score:
 ```
-
+processed 13659 tokens with 658 phrases; found: 7 phrases; correct: 0.
+accuracy:  90.01%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+              CPA: precision:   0.00%; recall:   0.00%; FB1:   0.00  
 ```
+This result is too bad. We think it have two reasons. First, we don't have enough time so we run 20 epoch only. Second ,the model have some problem that have not been solved. We also need time to fix it. 
 ### BLSTM-CNN-CRF
 F1-Score:
 ```
