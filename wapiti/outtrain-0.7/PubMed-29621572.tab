@@ -1,0 +1,17 @@
+Identification NN O
+of IN O
+a DT O
+unique JJ O
+loss-of-function NN B-NegReg
+mutation NN B-Var
+in IN O
+IGF1R NNP B-Gene
+and CC O
+a DT O
+crosstalk NN B-Reg
+between IN O
+IGF1R NNP B-Gene
+and CC O
+b'Wnt/\xce\xb2-catenin' NNP B-Pathway
+signaling NN I-Pathway
+pathways NNS I-Pathway

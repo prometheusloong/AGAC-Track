@@ -1,0 +1,27 @@
+Species-conserved NNS O
+SYNGAP1 NN O
+phenotypes NNS O
+associated VBN O
+with IN O
+neurodevelopmental JJ O
+disorders NNS O
+. . O
+
+SYNGAP1 NN B-Gene
+loss-of-function NN B-NegReg
+variants NNS B-Var
+are VBP O
+causally RB O
+associated VBN O
+with IN O
+intellectual JJ B-Disease
+disability NN I-Disease
+, , O
+severe JJ B-Disease
+epilepsy NN I-Disease
+, , O
+autism NN B-Disease
+spectrum NN I-Disease
+disorder NN I-Disease
+and CC O
+schizophrenia NN B-Disease
