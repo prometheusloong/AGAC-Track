@@ -27,7 +27,8 @@ Detailed information could visit AGAC Track website:
 - tensorflow 1.12
 
 You could use conda to configure the environment easily.
-```    conda create --name agac_task1 python=3.6 
+``` 
+    conda create --name agac_task1 python=3.6 
     conda init
     conda activate agac_task1
     conda install tensorflow-gpu=1.12 cudatoolkit=9.0(or conda install tensorflow=1.12 if you dont have a gpu.You can also choose the version of cudatoolkit according to your CUDA's version.)
@@ -51,8 +52,9 @@ It will delete special charater(like β and so on) and print to screen.
 ```
 cd wapiti/
 python json2BIO.py -i ../data -o ./outtrain
--i input .json file
--o output BIO file
+-i input .json file.
+-o output BIO file.
+-s choose delete special character(like β) or not, F is delete.
 ```
 
 And you should splite the BIO data to 7:3 (train data and test data for wapiti) and 6:2:2 (train data, test data and dev data for blstm-cnn-crf), randomly.
