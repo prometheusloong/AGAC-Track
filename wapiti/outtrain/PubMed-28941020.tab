@@ -1,0 +1,17 @@
+Loss-of-function NN B-NegReg
+variants NNS B-Var
+in IN O
+NFIA NNP B-Gene
+provide VBP O
+further JJ O
+support NN O
+that WDT O
+NFIA NNP O
+is VBZ O
+a DT O
+critical JJ O
+gene NN O
+in IN O
+1p32-p31 CD B-Disease
+deletion NN I-Disease
+syndrome NN I-Disease

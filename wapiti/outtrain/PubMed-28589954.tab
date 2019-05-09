@@ -1,0 +1,13 @@
+WNT10A NN B-Gene
+mutation NN B-Var
+causes VBZ B-Reg
+ectodermal JJ B-Disease
+dysplasia NN I-Disease
+by IN O
+impairing VBG B-NegReg
+progenitor NN B-CPA
+cell NN I-CPA
+proliferation NN I-CPA
+and CC O
+KLF4-mediated JJ B-CPA
+differentiation NN I-CPA
